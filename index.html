@@ -1,0 +1,1761 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Causal Learning and Decision Making Lab</title>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.js" integrity="sha256-P4TsE1nrEXYf5l55N6DqCHvL2t5CyDGbLHD1RKQG79s=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.8.9/jquery.csv.js"></script>
+<script src='https://d3js.org/d3.v4.min.js'></script>
+
+<!-- <script type="text/csv" src="students1.csv"></script> -->
+<script>
+// var result = $.csv.toArray(students1.csv);
+// var result = $.csv.toArray('"a","b","c"');
+
+// d3.csv("students1.csv", function(data) {
+//   console.log(data[0]);
+// });
+
+// The problem with all of these methods was that the folder had to be running on a server. I was able to get this to finally work by running "Web Server for Chrome"
+
+
+
+
+</script>
+
+    <!-- <script>
+    var data;
+
+    Papa.parse('students1.csv', {
+      delimiter: ",",
+      header: true,
+      download: true,
+      dynamicTyping: true,
+      complete: function(results) {
+        console.log(results);
+        data = results.data;
+      }
+    });
+    </script> -->
+
+<!-- How to read json from google spreadsheet file -->
+<!-- https://gist.github.com/terrywbrady/a03b25fe42959b304b1e -->
+    <head>
+
+
+
+
+
+	<link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+
+    <style type="text/css">
+      body {
+        padding-top: 0px;
+        padding-bottom: 40px;
+      }
+
+      .hero-unit {
+      	padding: 30px;
+      }
+    </style>
+
+
+  </head>
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+<div class="navbar navbar-inverse">
+  <div class="container-fluid">
+<!--   <div class="navbar-inner"> -->
+  <div class="navbar-inner">
+    <ul class="nav">
+      <li class="active"><a href="#Home">Home</a></li>
+      <li><a href="#Research Interests">Research Interests</a></li>
+      <li><a href="#Graduate Students">Grad Students</a></li>
+      <li><a href="#Resources">Resources</a></li>
+      <li><a href="#Publications">Publications</a></li>
+
+    </ul>
+  </div>
+  </div>
+</div>
+
+
+
+
+  	<div class="container" id="Home">
+
+  	<div class="row">
+
+    <div class="span12">
+    	<div class="hero-unit">
+
+	  <h2 class="text-center">Causal Learning & Decision Making Lab</h2>
+	  <p class="text-center">University of Pittsburgh</p>
+
+	  	</div>
+    </div>
+	</div>
+
+
+
+<div class="text-center"><h3>Lab Director: Ben Rottman</h3></div>
+  <div class="row">
+
+    <div class="span1"></div>
+    <div class="span2">
+
+    <address>
+    rottman@pitt.edu<br>
+    412-624-7493<br><br>
+    University of Pittsburgh<br>
+    Murdoch 546<br>
+    3420 Forbes Ave.<br>
+    Pittsburgh, PA 15260<br>
+
+    </address>
+
+    </div><!-- /.col-lg-4 -->
+    <div class="span1"></div>
+
+
+<div class="span4">
+<center>
+<!--   <img class="img-circle" src="pics/Kevin.jpg" alt="Generic placeholder image" width="140" height="140"> -->
+<img class="img-circle" src="pics/Ben.jpg" alt="Generic placeholder image" width="200" height="200">
+
+</center>
+</div><!-- /.col-lg-4 -->
+
+
+
+
+
+<div class="span4">
+<a href="http://www.psychology.pitt.edu/people/benjamin-m-rottman-phd" target="_blank"> Professor, Dept. of Psychology</a>
+<br>
+<a href="http://www.lrdc.pitt.edu/people/researcher-detail.cshtml?id=509" target="_blank">Research Scientist, Learning Research and Development Center</a>
+<br>
+<a href="https://www.asgraduate.pitt.edu/people/ben-rottman" target="_blank">Assistant Dean for Academic Affairs and Academic Integrity, Graduate Studies</a>
+<br><br>
+<a href="pubs/RottmanCV.pdf" target="_blank" style="font-size: 26px; margin-right: 1rem; ">CV</a>
+
+<a href="http://scholar.google.com/citations?user=BMIUsOgAAAAJ&hl=en&oi=ao" 
+   title="Google Scholar Profile"
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; margin-right: 1rem; outline: none;">
+  <img src="img/googlescholar.png" alt="Google Scholar" style="width: 26px; height: 26px;">
+</a>
+
+<a href="http://orcid.org/0000-0002-4718-3970" 
+   title="ORCID Profile"
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; margin-right: 1rem; outline: none;">
+  <img src="img/orcid.png" alt="ORCID" style="width: 26px; height: 26px;">
+</a>
+
+<a href="https://www.linkedin.com/in/ben-rottman-12a931123/" 
+   title="LinkedIn Profile"
+   target="_blank" 
+   rel="noopener noreferrer"
+   style="display: inline-flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: all 0.2s ease; text-decoration: none; margin-right: 1rem; outline: none;">
+  <img src="img/linkedin.png" alt="LinkedIn" style="width: 26px; height: 26px;">
+</a>
+
+</div><!-- /.col-lg-4 -->
+
+
+
+
+
+</div><!-- row -->
+
+<hr class="featurette-divider">
+
+
+
+	      <div class="row">
+
+<div class="text-center" id="Research Interests"><h3>Research Interests</h3></div>
+        <div class="span6">
+          <h4 class="text-center">The Science of Causal Learning</h4>
+          <p>The primary research focus of the lab is causal learning - how people learn cause-effect relationships from their experiences (e.g., this new medicine I have been trying seems to work well). We are especially interested in causal learning from time series data, in which the causes and effects exhibit gradual changes over time. Another direction is studying how politically motivated reasoning affects causal judgments.</p>
+          <p>Over the past 8 years or so, our focus has primarily been on causal learning in everyday life, for example how people test whether a medicine is working or not, try new diets, or assess the efficacy of other lifestyle changes they make. To study this in a controlled way, we have recently conduced a number of smartphone experiments to study causal learning and memory over 3-4 weeks.</p>
+          <p></p>
+          <h4 class="text-center">Causality and Research Methods</h4>
+          <p>One of the primary goals of science is to uncover causal relations. We are interested in  understanding how to teach causal inference in research methods classrooms to improve science education. See <a href="#Resources">Resources</a> for more info. </p>
+
+
+       </div>
+        <div class="span6">
+
+          <h4 class="text-center">Decision Making</h4>
+          <p>More broadly, we are interested in when and whether human decision makers make judgments that are approximately 'normative' (correct). We have studied the accuracy of decision making with regards to causally-based decisions as well as Bayesian reasoning and medical diagnosis.</p>
+          <h4 class="text-center">Decision Making about Sustainability</h4>
+          <p>Currently, I am exploring a new area of research on how we can provide decision support to people who are trying to make decisions about how to live a more sustainable life. In particular, I am focusing on decisions that people can make regarding ways to reduce energy consuption for their homes. One challenge is that there are hundreds of potential home retrofits; how can we help people decide which ones are relevant to their particular home, fit their budget, and are compatible with other goals such as comfort. 
+          </p>
+
+        </div>
+      </div>
+
+
+        
+        
+<hr class="featurette-divider">
+<div class="text-center" id="Graduate Students"><h3>Note to Prospective Graduate Students</h3></div>
+I am open to recruiting a new graduate student to start in Fall of 2027. My main focuses right now are causal learning and a new focus, decision making about sustainability.
+<br>
+ 
+        
+        
+        
+<hr class="featurette-divider">
+<div class="text-center" id="Graduate Students"><h3>Graduate Students</h3></div>
+<br>
+
+<div class="row">
+<div class="span6">
+<center>
+<img class="img-circle" src="pics/TaylorStalnaker.jpg" alt="Taylor Stalnaker Headshot" width="200" height="200">
+  <h4><a href="https://www.linkedin.com/in/taylor-stalnaker-8006bb307/" target="_blank">Taylor Stalnaker</a></h4>
+</center>
+    </div>
+<div class="span6">
+<center>
+<img class="img-circle" src="pics/NataliaJahnke.jpg" alt="Natalia Jahnke Headshot" width="200" height="200">
+  <h4><a href="https://www.linkedin.com/in/natalia-jahnke-545390293/" target="_blank">Natalia Jahnke (Post-Bac)</a></h4>
+</center>
+    </div>
+</div>
+    
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+<hr class="featurette-divider">
+<div class="text-center"><h3>Graduate Alumni</h3></div>
+<div class="row"><center>
+          <div class="span2"><a href="https://www.linkedin.com/in/kevinwxsoo/" target="_blank">Kevin Soo</a></div>
+          <div class="span2"><a href="https://www.linkedin.com/in/coryderringer/" target="_blank">Cory Derringer</a></div>
+          <div class="span2"><a href="https://www.linkedin.com/in/ciara-willett-86000877/" target="_blank">Ciara Willett</a></div>
+          <div class="span2"><a href="https://www.linkedin.com/in/zacharyacaddick/" target="_blank">Zac Caddick</a></div>
+          <div class="span2"><a href="https://www.linkedin.com/in/sara-jaramillo-4a2018147/" target="_blank">Sara Jaramillo</a></div>
+          <div class="span2"><a href="https://www.linkedin.com/in/yiwen-zhang-868368190/" target="_blank">Yiwen Zhang</a></div>
+</center>
+</div>
+    
+    
+
+
+
+
+
+
+
+        
+        
+        
+        
+        
+<hr class="featurette-divider">
+<div class="text-center" id="Resources"><h3>Resources</h3></div>
+<table class="table">
+  <thead>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+      <a href="https://canvas.pitt.edu/courses/124970" class="btn btn-small btn-primary" type='button' style="white-space: nowrap;" target="_blank">osRMss</a>
+      </td>
+      <td>open source Research Methods for the social sciences. An open educational resource that anyone teaching research methods can adapt for their own courses.</td>
+    </tr>
+    <tr>
+    <tr>
+      <td>
+      <a href="https://benrottman.github.io/Causality_and_Regression_shinylive/" class="btn btn-small btn-primary" type='button' style="white-space: nowrap;" target="_blank">Causality & Regression</a>
+      </td>
+      <td>R Shiny app for learning about the relation between Causality and Multiple Regression.</td>
+    </tr>
+    <tr>
+      <td>
+      <a href="https://www.psychcloud.org/" class="btn btn-small btn-primary" type='button' style="white-space: nowrap;" target="_blank">PsychCloud</a>
+      </td>
+      <td>Tutorial and Code for making psychology experiments (or interactive websites more generally) hosted on Google App Engine and Google's Could. This is how we program web experiments. At this point, the code is out of date but is helpful to understand what can be done.</td>
+    </tr>
+    <tr>
+      <td>
+      <a href="https://github.com/kevinsoo/LongitudinalCausalStrengthModels" class="btn btn-small btn-primary" type='button' style="white-space: nowrap;" target="_blank">Causal Strength</a>
+      </td>
+      <td>Code for  models of causal strength including Rescorla-Wagner (Rescorla & Wagner, 1972), ∆P (Jenkins & Ward, 1965), Power-PC (Cheng, 1997), and Temporal-difference (Sutton & Barto, 1987).</td>
+    </tr>
+  </tbody>
+</table>
+        
+        
+        
+        
+        
+
+
+<hr class="featurette-divider">
+<div class="text-center" id="Publications"><h3>Publications</h3></div>
+
+Electronic versions are provided as a professional courtesy to ensure timely dissemination of academic work for individual, noncommercial purposes. Copyright (and all rights therein) resides with the respective copyright holders, as stated within each paper. These files may not be reposted without permission.
+
+
+
+<div class="text-center"><h4>2025</h4></div>
+<div class="accordion" id="accordion2025b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+  <div class="accordion-ben">
+    Rottman, B. M. (2025). Causal learning with two confounded causes over weeks. <i>Judgment and Decision Making</i>, e31. 
+    <a href="https://doi.org/10.1017/jdm.2025.10006" target="_blank">https://doi.org/10.1017/jdm.2025.10006</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2025b" href="#collapse2025b">Abstract</a>
+    <a href="pubs/2025b/2025RottmanJDMControllingTwoCauses.pdf" target="_blank">PDF</a>
+    <a href="pubs/2025b/2025RottmanJDMControllingTwoCausesOnlineSupplement.pdf" target="_blank">OnlineSupplement</a>
+
+  </div>
+    </div>
+    <div id="collapse2025b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Prior research shows that, when making causal inferences, people can control for alternative causes. However, these studies utilize artificial inter-trial intervals on the order of seconds; in real-life situations, people often experience data over days and weeks (e.g., learning the effectiveness of two new medications over multiple weeks). Across two experiments, participants learned about two possible causes from data presented either in a more naturalistic paradigm (one trial per day for multiple weeks via smartphone) or in a traditional trial-by-trial paradigm (a rapid series of trials). The results show that people can control for alternative causes when learning over long timeframes, but they also exhibit non-normative discounting. The results also reveal that the extent to which people control and learn simple relations is suboptimal across both short and long timeframes.
+      </div>
+    </div>
+  </div>
+</div>    
+
+
+<div class="accordion" id="accordion2025a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+  <div class="accordion-ben">
+ Rottman, B. M. & Zhang, Y. (2025). Learning about Causal Relations that Change over Time: Primacy and Recency over Long Timeframes in Causal Judgments and Memory <i>  Cognitive Research: Principles & Implications. 10</i>(1), 9.
+    <a href="https://doi.org/10.1186/s41235-025-00614-9" target="_blank">https://doi.org/10.1186/s41235-025-00614-9</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2025a" href="#collapse2025a">Abstract</a>
+    <a href="pubs/2025a/2025RottmanZhangCRPI.pdf" target="_blank">PDF</a>
+
+  </div>
+    </div>
+    <div id="collapse2025a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Being able to notice that a cause–effect relation is getting stronger or weaker is important for adapting to one’s environment and deciding how to use the cause in the future. We conducted an experiment in which participants learned about a cause–effect relation that either got stronger or weaker over time. The experiment was conducted with a typical procedure in which the learning cases were presented rapidly, and with a mobile phone procedure, in which participants experienced the cause–effect relation over 24 days. First, we found that people could detect the change in contingency. They were better at doing so in the artificial short timeframe task, but still could do so in the more realistic long timeframe task. Second, when making summary judgments about the cause–effect relation, participants exhibited a recency effect for most measures in the long timeframe, but did not exhibit a primacy or recency effect in the short timeframe. Third, though participants’ episodic memories for individual cause–effect events in the learning sequence were quite poor, they did exhibit primacy and recency effects in the short timeframe; these were attenuated in the long timeframe. These findings raise fundamental questions about causal learning; they suggest that people automatically recognize changes and store representations of the contingency during different phases of learning, but this ability is not predicted by most existing theories of causal learning.
+      </div>
+    </div>
+  </div>
+</div>    
+
+
+<div class="text-center"><h4>2024</h4></div>
+<div class="accordion" id="accordion2024">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+  <div class="accordion-ben">
+Cowan, E., *Zhang, Y., Rottman, B. M., & Murty, V. (2024). The effects of mnemonic variability and spacing on memory over multiple timescales. <i>Proceedings of the National Academy of Sciences. 121</i>(12), e2311077121. 
+    <a href="https://doi.org/10.1073/pnas.2311077121" target="_blank">https://doi.org/10.1073/pnas.2311077121</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2024" href="#collapse2024">Abstract</a>
+    <a href="pubs/2024/2024CowanEtAlPNAS.pdf" target="_blank">PDF</a>
+
+  </div>
+    </div>
+    <div id="collapse2024" class="accordion-body collapse">
+      <div class="accordion-inner">
+<p><b>Significance:</b> Spacing out learning over time is one of the most robust methods to enhance later memory. Yet, much of this work is predicated on repeated exposures to identical information, which is rare in everyday life. To harness these benefits in real-world settings, we first need to characterize the efficacy of the spacing effect in the face of mnemonic variability. For isolated features of memory presented with mnemonic variability, the benefit of spacing was only observed with longer timescales of spacing intervals (hours to days) and not at short intervals (seconds to minutes). However, for more associative forms of memory, variability undermined the effects of spacing. These results challenge the existing notions of how and when spaced learning facilitates long-term memory.</p>
+
+<p><b>Abstract:</b> The memory benefit that arises from distributing learning over time rather than in consecutive sessions is one of the most robust effects in cognitive psychology. While prior work has mainly focused on repeated exposures to the same information, in the real world, mnemonic content is dynamic, with some pieces of information staying stable while others vary. Thus, open questions remain about the efficacy of the spacing effect in the face of variability in the mnemonic content. Here, in two experiments, we investigated the contributions of mnemonic variability and the timescale of spacing intervals, ranging from seconds to days, to long-term memory. For item memory, both mnemonic variability and spacing intervals were beneficial for memory; however, mnemonic variability was greater at shorter spacing intervals. In contrast, for associative memory, repetition rather than mnemonic variability was beneficial for memory, and spacing benefits only emerged in the absence of mnemonic variability. These results highlight a critical role for mnemonic variability and the timescale of spacing intervals in the spacing effect, bringing this classic memory paradigm into more ecologically valid contexts.</p>
+      </div>
+    </div>
+  </div>
+</div>    
+
+
+        
+<div class="text-center"><h4>2023</h4></div>
+        
+        
+
+<div class="accordion" id="accordion2022c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+        Zhang, Y., & Rottman, B. M. (2023). Causal learning with interrupted time series data. <i>Judgment and Decision Making, 18,</i> e30. </i>
+    <a href="https://doi.org/10.1017/jdm.2023.29" target="_blank">https://doi.org/10.1017/jdm.2023.29</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2022c" href="#collapse2022c">Abstract</a>
+    <a href="pubs/2023c/2023ZhangRottmanInterruptedTimeSeries.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2022c" class="accordion-body collapse">
+      <div class="accordion-inner">
+People often test changes to see if the change is producing the desired result (e.g., does taking an antidepressant improve my mood, or does keeping to a consistent schedule reduce a child’s tantrums?). Despite the prevalence of such decisions in everyday life, it is unknown how well people can assess whether the change has influenced the result. According to interrupted time series analysis (ITSA), doing so involves assessing whether there has been a change to the mean (‘level’) or slope of the outcome, after versus before the change. Making this assessment could be hard for multiple reasons. First, people may have difficulty understanding the need to control the slope prior to the change. Additionally, one may need to remember events that occurred prior to the change, which may be a long time ago. In Experiments 1 and 2, we tested how well people can judge causality in 9 ITSA situations across 4 presentation formats in which participants were presented with the data simultaneously or in quick succession. We also explored individual differences. In Experiment 3, we tested how well people can judge causality when the events were spaced out once per day, mimicking a more realistic timeframe of how people make changes in their lives. We found that participants were able to learn accurate causal relations when there is a zero pre-intervention slope in the time series but had difficulty controlling for nonzero pre-intervention slopes. We discuss these results in terms of 2 heuristics that people might use.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+<div class="accordion" id="accordion2023b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Zhang, Y., & Rottman, B. M. (2021). Causal learning with delays up to 21 hours. <i>Psychonomic Bulletin and Review. </i>
+    <a href="https://doi.org/10.3758/s13423-023-02342-x" target="_blank">https://doi.org/10.3758/s13423-023-02342-x</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2023b" href="#collapse2023b">Abstract</a>
+    <a href="pubs/2023b/2023ZhangRottmanDelays.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2023b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Considerable delays between causes and effects are commonly found in real life. However, previous studies have only investigated how well people can learn probabilistic relations with delays on the order of seconds. In the current study we tested whether people can learn a cause-effect relation with delays of 0, 3, 9, or 21hours, and the study lasted 16 days. We found that learning was slowed with longer delays, but by the end of 16 days participants had learned the cause-effect relation in all four conditions, and they had learned the relation about equally well in all four conditions. This suggests that in real-world situations people may still be fairly accurate at inferring cause-effect relations with delays if they have enough experience. We also discuss ways that delays may interact with other real-world factors that could complicate learning.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+
+
+        
+        
+        
+        
+        
+        
+<div class="accordion" id="accordion2023a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+
+5 articles in the special issue of Cognitive Research: Principles and Implications, 8(1)
+        <a href="https://www.springeropen.com/collections/csme" target="_blank">The Cognitive Science of Medical Expertise</a>
+<br><br>
+Authors in different orders for different papers: Rottman, B.M., Caddick, Z., Fraundorf, S.H, and Nokes-Malach, T.M.
+<br><br>
+Cognitive perspectives on maintaining physicians’ medical expertise:<br>
+<ol type="I">
+  <li>
+    Reimagining maintenance of certification to promote lifelong learning. 
+    <a href="https://doi.org/10.1186/s41235-023-00496-9" target="_blank">https://doi.org/10.1186/s41235-023-00496-9</a> 
+    <a href="pubs/2023a/2023MedicalExpertise1.pdf" target="_blank">PDF</a><br>
+  </li>
+  <li>
+    Acquiring, maintaining, and updating cognitive skills. 
+    <a href="https://doi.org/10.1186/s41235-023-00497-8" target="_blank">https://doi.org/10.1186/s41235-023-00497-8</a> 
+    <a href="pubs/2023a/2023MedicalExpertise2.pdf" target="_blank">PDF</a><br>
+  </li>
+  <li>
+    Strengths and weaknesses of self-assessment. 
+    <a href="https://doi.org/10.1186/s41235-023-00511-z" target="_blank">https://doi.org/10.1186/s41235-023-00511-z</a> 
+    <a href="pubs/2023a/2023MedicalExpertise3.pdf" target="_blank">PDF</a><br>
+  </li>
+  <li>
+    Best practices and open questions in using testing to enhance learning and retention. 
+    <a href="https://doi.org/10.1186/s41235-023-00508-8" target="_blank">https://doi.org/10.1186/s41235-023-00508-8</a> 
+    <a href="pubs/2023a/2023MedicalExpertise4.pdf" target="_blank">PDF</a><br>
+  </li>
+  <li>
+    Using a motivational framework to understand the benefits and costs of testing. 
+    <a href="https://doi.org/10.1186/s41235-023-00518-6" target="_blank">htts://doi.org/10.1186/s41235-023-00518-6</a> 
+    <a href="pubs/2023a/2023MedicalExpertise5.pdf" target="_blank">PDF</a>
+  </li>
+</ol>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2023a" href="#collapse2023a">Abstracts</a>
+    </div>
+    <div id="collapse2023a" class="accordion-body collapse">
+      <div class="accordion-inner">
+I: Until recently, physicians in the USA who were board-certified in a specialty needed to take a summative test every 6–10 years. However, the 24 Member Boards of the American Board of Medical Specialties are in the process of switching toward much more frequent assessments, which we refer to as longitudinal assessment. The goal of longitudinal assessments is to provide formative feedback to physicians to help them learn content they do not know as well as serve an evaluation for board certification. We present five articles collectively covering the science behind this change, the likely outcomes, and some open questions. This initial article introduces the context behind this change. This article also discusses various forms of lifelong learning opportunities that can help physicians stay current, including longitudinal assessment, and the pros and cons of each.
+<br><br>
+II: Over the course of training, physicians develop significant knowledge and expertise. We review dual-process theory, the dominant theory in explaining medical decision making: physicians use both heuristics from accumulated experience (System 1) and logical deduction (System 2). We then discuss how the accumulation of System 1 clinical experience can have both positive effects (e.g., quick and accurate pattern recognition) and negative ones (e.g., gaps and biases in knowledge from physicians’ idiosyncratic clinical experience). These idiosyncrasies, biases, and knowledge gaps indicate a need for individuals to engage in appropriate training and study to keep these cognitive skills current lest they decline over time. Indeed, we review converging evidence that physicians further out from training tend to perform worse on tests of medical knowledge and provide poorer patient care. This may reflect a variety of factors, such as specialization of a physician’s practice, but is likely to stem at least in part from cognitive factors. Acquired knowledge or skills gained may not always be readily accessible to physicians for a number of reasons, including an absence of study, cognitive changes with age, and the presence of other similar knowledge or skills that compete in what is brought to mind. Lastly, we discuss the cognitive challenges of keeping up with standards of care that continuously evolve over time.
+<br><br>
+III: Is self-assessment enough to keep physicians’ cognitive skills—such as diagnosis, treatment, basic biological knowledge, and communicative skills—current? We review the cognitive strengths and weaknesses of self-assessment in the context of maintaining medical expertise. Cognitive science supports the importance of accurately self-assessing one’s own skills and abilities, and we review several ways such accuracy can be quantified. However, our review also indicates a broad challenge in self-assessment is that individuals do not have direct access to the strength or quality of their knowledge and instead must infer this from heuristic strategies. These heuristics are reasonably accurate in many circumstances, but they also suffer from systematic biases. For example, information that feels easy to process in the moment can lead individuals to overconfidence in their ability to remember it in the future. Another notable phenomenon is the Dunning–Kruger effect: the poorest performers in a domain are also the least accurate in self-assessment. Further, explicit instruction is not always sufficient to remove these biases. We discuss what these findings imply about when physicians’ self-assessment can be useful and when it may be valuable to supplement with outside sources.
+<br><br>
+IV: Although tests and assessments—such as those used to maintain a physician’s Board certification—are often viewed merely as tools for decision-making about one’s performance level, strong evidence now indicates that the experience of being tested is a powerful learning experience in its own right: The act of retrieving targeted information from memory strengthens the ability to use it again in the future, known as the testing effect. We review meta-analytic evidence for the learning benefits of testing, including in the domain of medicine, and discuss theoretical accounts of its mechanism(s). We also review key moderators—including the timing, frequency, order, and format of testing and the content of feedback—and what they indicate about how to most effectively use testing for learning. We also identify open questions for the optimal use of testing, such as the timing of feedback and the sequencing of complex knowledge domains. Lastly, we consider how to facilitate adoption of this powerful study strategy by physicians and other learners.
+<br><br>
+V: We apply a motivational perspective to understand the implications of physicians’ longitudinal assessment. We review the literature on situated expectancy-value theory, achievement goals, mindsets, anxiety, and stereotype threat in relation to testing and assessment. This review suggests several motivational benefits of testing as well as some potential challenges and costs posed by high-stakes, standardized tests. Many of the motivational benefits for testing can be understood from the equation of having the perceived benefits of the test outweigh the perceived costs of preparing for and taking the assessment. Attention to instructional framing, test purposes and values, and longitudinal assessment frameworks provide vehicles to further enhance motivational benefits and reduce potential costs of assessment.
+<br><br>
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+        
+    
+    
+    
+    
+    
+<div class="text-center"><h4>2022</h4></div>
+
+    
+    
+    
+<div class="accordion" id="accordion2022b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Caddick, Z. A. (2022). Learning, Choice Consistency, and Individual Differences in How People Think Elections Should be Decided. <i>(Doctoral dissertation, University of Pittsburgh)</i>
+      <a href="https://d-scholarship.pitt.edu/44049/" target="_blank">https://d-scholarship.pitt.edu/44049/</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2022b" href="#collapse2022b">Abstract</a>
+      <a href="pubs/2022b/2022 Caddick ElectionsDecidedDissertation.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2022b" class="accordion-body collapse">
+      <div class="accordion-inner">
+There are ongoing debates about whether the U.S. should switch from plurality voting to alternative systems (e.g., cardinal or ranked-choice voting) and debates about the relative fairness and ease of learning different systems. To address these issues, we developed the ‘Who Won the Election Task’ (WWET) in which participants were shown the results of a hypothetical election in which a group of people were voting on which candidate to hire. The WWET had participants determine elections from raw data and allowed us to calculate the degree to which participants’ choices agreed with the three voting systems. In four studies, we evaluated how participants’ preferences about voting systems, the consistency in these preferences when measured in different ways, and whether their understanding of the voting systems and individual differences predicted their voting system preferences. Additionally, we tested educational interventions, which improved participants’ understanding of the voting systems. Across all the studies, participants’ choices in the WWET were most consistent with plurality voting. However, participants tended to view ranked-choice voting as fairer than plurality. In Studies 3 and 4 participants even sometimes viewed cardinal voting as fairer than plurality. In general, we found low consistency in voting system preferences when measured in different ways. One reason this may occur is because participants struggled to comprehend the alternative voting systems and were not adequately self-assessing their own knowledge. This research has implications for persuading the public to change voting systems for elections as well as how groups should make collective decisions (e.g., hiring decisions).
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="accordion" id="accordion2022a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Willett, C. L. (2022). Why Correlation Doesn’t Imply Causation: Improving Undergraduates Understanding of Research Design <i>(Doctoral dissertation, University of Pittsburgh)</i>
+      <a href="https://d-scholarship.pitt.edu/44077/" target="_blank">https://d-scholarship.pitt.edu/44077/</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2022a" href="#collapse2022a">Abstract</a>
+      <a href="pubs/2022a/2022 Willett CorrelationCausationDissertation.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2022a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Understanding when it is appropriate to make causal inferences from a statistical result is a fundamental skill for science literacy. Prior research has concentrated on erroneous causal judgments about observational studies, but there is little research on whether people understand that experiments provide stronger justification for causal claims. Our study tested the efficacy of an intervention at improving students’ ability to discriminate between correlation and causation. Students were taught how to use causal diagrams to illustrate possible explanations for a statistical relation in an experiment versus an observational study. To evaluate the intervention’s efficacy, intro psych (Experiments 1-3) and research methods (Experiment 1) students decided whether to make causal inferences about hypothetical observational studies and experiments. In Experiment 1, we tested multiple methods of instruction to see which worked best. Intro psych students learned more when they completed practice problems that involved generating self-explanations, whereas research methods students learned more from making analogical comparisons or reading worked examples. Critically, we found that students struggled with identifying the study design, which is the first step in correlation-causation discrimination. In Experiment 2, we added instructions to the Self Explanation intervention about how to identify observational studies versus experiments. Our modifications did not improve this skill nor students’ ability to discriminate between correlation and causation. The most successful intervention was in Experiment 3, which explicitly pointed out that people often make errors when evaluating evidence from observational studies and repeated the importance of considering study design when making causal judgments. A second goal of Experiment 3 was to test the influence of students’ expectations about the direction of the statistical relationship on their evaluation of the evidence. Students made more causal inferences about study outcomes that were in the same direction as their prior beliefs than outcomes they thought were implausible. After the intervention, students still used their prior beliefs to decide whether to make a causal judgment, but they also more strongly considered the study design in their evaluation of evidence. In general, our intervention improved students’ understanding of causality, but its efficacy may also depend on their prior knowledge.
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+
+        
+        
+        
+<div class="text-center"><h4>2021</h4></div>
+
+        
+<div class="accordion" id="accordion2021f">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+  <div class="accordion-ben">
+Jaramillo, S., Kuo, E., Rottman, B. M., & Nokes-Malach, T. J. (2021, October). Investigating causal inference difficulties with a simple, qualitative force-and-motion problem. In <i>Physics Education Research Conference</i>i> (pp. 4-5).
+    <a href="https://doi.org/10.1119/perc.2021.pr.Jaramillo" target="_blank">https://doi.org/10.1119/perc.2021.pr.Jaramillo</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021f" href="#collapse2021f">Abstract</a>
+    <a href="pubs/2021f/JaramilloKuoRottmanNokes-Malach2021PERC.pdf" target="_blank">PDF</a>
+
+  </div>
+    </div>
+    <div id="collapse2021f" class="accordion-body collapse">
+      <div class="accordion-inner">
+Understanding the nature of causality is a key component of conceptual understanding in science. The hypothesis of this study is that certain types of causal inference are more challenging than others. If correct, particularly challenging causal inferences may provide a unified explanation for different conceptual  difficulties across physics content areas. This paper investigates two aspects of a simple, qualitative force-and-motion problem that may impact the difficulty of the causal inferences required. The first aspect is the type of causal inference required: cause-to-effect (CE), effect-to-cause (EC), or cause-to-cause (CC). The second aspect is information about an alternative cause, which can be explicitly constant, explicitly unknown, or ambiguous. To test the impact of these two problem aspects on participants inference accuracy we conducted an on-line experiment in which participants were randomly assigned to one of thirty-six conditions that systematically varied these two aspects across conditions. The results show that (i) for explicitly constant alternative causes, CC inferences are more difficult than CE or EC inferences, (ii) inferences given explicitly unknown alternative cause information are more difficult than inferences given explicitly constant alternative causes, and (iii) ambiguous alternative cause information is treated as implying the alternative causes are explicitly constant, which is in line with conversational assumptions rather than a formal, logical perspective. These results hint at the potential fruitfulness of understanding the causal inferences underlying conceptual difficulties in physics.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+        
+
+<div class="accordion" id="accordion2021e">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Zhang, Y., & Rottman, B. M. (2021). Causal Learning with Interrupted Time Series. In T. Fitch, C. Lamm, H. Leder, & K. Tessmar (Eds.) <i>Proceedings of the Annual Meeting of the Conference of the Cognitive Science Society.</i>
+    <a href="https://escholarship.org/uc/item/50j0b0p8" target="_blank">https://escholarship.org/uc/item/50j0b0p8</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021e" href="#collapse2021e">Abstract</a>
+    <a href="pubs/2021e/2021 Zhang Rottman Cogsci Conference Interrupted.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2021e" class="accordion-body collapse">
+      <div class="accordion-inner">
+Interrupted time series analysis (ITSA) is a statistical proce- dure that evaluates whether an intervention causes a change in the intercept and/or slope of the time series. However, very little research has accessed causal learning in interrupted time series situations. We systematically investigated whether peo- ple are able to learn causal influences from a process akin to ITSA, and compared four different presentation formats of stimuli. We found that participants’ judgments agreed with ITSA in cases in which the pre-intervention slope is zero or in the same direction as the changes in intercept or slope. How- ever, participants had considerable difficulty controlling for pre-intervention slope when it is in the opposite direction of the changes in intercept or slope. The presentation formats didn’t affect judgments in most cases, but did in one. We discuss these results in terms of two potential heuristics that people might use aside from a process akin to ITSA.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+        
+
+<div class="accordion" id="accordion2021d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Zhang, Y., & Rottman, B. M. (2021). Causal Learning with Delays Up to 21 Hours. In T. Fitch, C. Lamm, H. Leder, & K. Tessmar (Eds.) <i>Proceedings of the Annual Meeting of the Conference of the Cognitive Science Society.</i> 
+    <a href="https://escholarship.org/uc/item/8w78273f" target="_blank">https://escholarship.org/uc/item/8w78273f</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021d" href="#collapse2021d">Abstract</a>
+    <a href="pubs/2021d/2021 Zhang Rottman Cogsci Conference Delays.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2021d" class="accordion-body collapse">
+      <div class="accordion-inner">
+Delays between causes and effects are commonly found in cause-effect relationships in real life. However, previous stud- ies have only investigated delays on the order of seconds. In the current study we tested whether people can learn a cause- effect relation with hour long delays. The delays between the cause and effect were either 0, 3, 9, or 21 hours, and the study lasted 16 days. Surprisingly, we found that participants were able to learn the causal relation about equally as well in all four conditions. These findings demonstrate a remarkable ability to accurately learn causal relations in a realistic timeframe that has never been tested before.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+<div class="accordion" id="accordion2021c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Caddick, Z, & Rottman, B. M. (2021). Motivated Reasoning in an Explore-Exploit Task. Cognitive Science.
+    <a href="https://doi.org/10.1111/cogs.13018" target="_blank">doi:10.1111/cogs.13018</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021c" href="#collapse2021c">Abstract</a>
+    <a href="pubs/2021c/2021CaddickRottmanCognitiveScience.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2021c" class="accordion-body collapse">
+      <div class="accordion-inner">
+The current research investigates how prior preferences affect causal learning. Participants were tasked with repeatedly choosing policies (e.g., increase vs. decrease border security funding) in order to maximize the economic output of an imaginary country and inferred the influence of the policies on the economy. The task was challenging and ambiguous, allowing participants to interpret the relations between the policies and the economy in multiple ways. In three studies, we found evidence of motivated reasoning despite financial incentives for accuracy. For example, participants who believed that border security funding should be increased were more likely to conclude that increasing border security funding actually caused a better economy in the task. In Study 2, we hypothesized that having neutral preferences (e.g., preferring neither increased nor decreased spending on border security) would lead to more accurate assessments overall, compared to having a strong initial preference; however, we did not find evidence for such an effect. In Study 3, we tested whether providing participants with possible functional forms of the policies (e.g., the policy takes some time to work or initially has a negative influence but eventually a positive influence) would lead to a smaller influence of motivated reasoning but found little evidence for this effect. This research advances the field of causal learning by studying the role of prior preferences, and in doing so, integrates the fields of causal learning and motivated reasoning using a novel explore-exploit task.
+      </div>
+    </div>
+  </div>
+</div>    
+        
+        
+
+<div class="accordion" id="accordion2021b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Willett, C. L., & Rottman, B. M. (2021). The accuracy of causal learning over long timeframes: An ecological momentary experiment approach. Cognitive Science, 45(7), e12985.
+    <a href="https://doi.org/10.1111/cogs.12985" target="_blank">doi:10.1111/cogs.12985</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021b" href="#collapse2021b">Abstract</a>
+    <a href="pubs/2021b/2021 Willett Rottman Cogsci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2021b" class="accordion-body collapse">
+      <div class="accordion-inner">
+The ability to learn cause–effect relations from experience is critical for humans to behave adaptively — to choose causes that bring about desired effects. However, traditional experiments on experience- based learning involve events that are artificially compressed in time so that all learning occurs over the course of minutes. These paradigms therefore exclusively rely upon working memory. In contrast, in real-world situations we need to be able to learn cause–effect relations over days and weeks, which necessitates long-term memory. 413 participants completed a smartphone study, which compared learn- ing a cause–effect relation one trial per day for 24 days versus the traditional paradigm of 24 trials back- to- back. Surprisingly, we found few differences between the short versus long timeframes. Subjects were able to accurately detect generative and preventive causal relations, and they exhibited illusory correlations in both the short and long timeframe tasks. These results provide initial evidence that experience-based learning over long timeframes exhibits similar strengths and weaknesses as in short timeframes. However, learning over long timeframes may become more impaired with more complex tasks.
+      </div>
+    </div>
+  </div>
+</div>     
+        
+        
+<!-- Pub 45 -->
+<div class="accordion" id="accordion2021a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Barnes, K., Rottman, B. M., & Colagiuri, B. (2021). The placebo effect: To explore or to exploit? Cognition. Cognition, 214, 104753.
+    <a href="https://doi.org/10.1016/j.cognition.2021.104753" target="_blank">doi:10.1016/j.cognition.2021.104753</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2021a" href="#collapse2021a">Abstract</a>
+    <a href="pubs/2021a/2021 Barnes Rottman Colagiuri Cognition.pdf" target="_blank">PDF</a>
+    <a href="pubs/2021a/2021 Barnes Rottman Colagiuri Cognition Appendix 1.pdf" target="_blank">Appendix 1</a>
+    <a href="pubs/2021a/2021 Barnes Rottman Colagiuri Cognition Appendix 2.pdf" target="_blank">Appendix 2</a>
+
+	</div>
+    </div>
+    <div id="collapse2021a" class="accordion-body collapse">
+      <div class="accordion-inner">
+How people choose between options with differing outcomes (explore-exploit) is a central question to under- standing human behaviour. However, the standard explore-exploit paradigm relies on gamified tasks with low- stake outcomes. Consequently, little is known about decision making for biologically-relevant stimuli. Here, we combined placebo and explore-exploit paradigms to examine detection and selection of the most effective treatment in a pain model. During conditioning, where ‘optimal’ and ‘suboptimal’ sham-treatments were paired with a reduction in electrical pain stimulation, participants learnt which treatment most successfully reduced pain. Modelling participant responses revealed three important findings. First, participants’ choices reflected both directed and random exploration. Second, expectancy modulated pain – indicative of recursive placebo effects. Third, individual differences in terms of expectancy during conditioning predicted placebo effects during a subsequent test phase. These findings reveal directed and random exploration when the outcome is biologically-relevant. Moreover, this research shows how placebo and explore-exploit literatures can be unified.
+      </div>
+    </div>
+  </div>
+</div>     
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+<div class="text-center"><h4>2020</h4></div>
+
+        
+        
+
+<div class="accordion" id="accordion2020d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Kuo, E., Weinlader, N. K., Rottman, B. M., & Nokes-Malach, T. J. (2020). Using causal networks to examine resource productivity and coordination in learning science. In M. Gresalfi & I. Horn (Eds.) 
+<i>Proceedings of the International Conference of the Learning Sciences.</i>
+The International Society of the Learning Sciences.
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2020d" href="#collapse2020d">Abstract</a>
+    <a href="pubs/2020d/2020KuoWeinladerRottmanNokesMalachICLS.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2020d" class="accordion-body collapse">
+      <div class="accordion-inner">
+We propose that causal networks representing canonical scientific models can be a useful analytic tool for specifying how student knowledge resources are aligned with canonical science as well as the ways that they need to be recoordinated in learning science. Using causal networks to analyze student-generated science explanations, we highlight three results that illustrate the ways in which student thinking can simultaneously align with and break from correct scientific reasoning. This initial study highlights the potential benefits of causal networks for specifying the role of student resources in learning science.
+      </div>
+    </div>
+  </div>
+</div>     
+        
+
+
+<div class="accordion" id="accordion2020c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Willett, C., & Rottman, B. M., (2020).  Causal learning with two causes over weeks. In S. Denison, M. Mack, & Y. Xu, & B. C. Armstrong (Eds.) 
+<i>Proceedings of the 42st Annual Conference of the Cognitive Science Society.</i> Austin, TX: Cognitive Science Society.
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2020c" href="#collapse2020c">Abstract</a>
+    <a href="pubs/2020c/WillettRottmanCogsci2020.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2020c" class="accordion-body collapse">
+      <div class="accordion-inner">
+When making causal inferences, prior research shows that people are capable of controlling for alternative causes. These studies, however, utilize artificial inter-trial intervals on the order of seconds; in real-life situations people often experience data over days and weeks (e.g., learning the effectiveness of two new medications over multiple weeks). In the current study, participants learned about two possible causes from data presented in a traditional trial-by-trial paradigm (rapid series of trials) versus a more naturalistic paradigm (one trial per day for multiple weeks via smartphone). Our results suggest that while people are capable of detecting simple cause-effect relations that do not require controlling for another cause when learning over weeks, they have difficulty learning cause-effect relations that require controlling for alternative causes.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2020b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K. W. & Rottman, B. M. (2020). Distinguishing causation and correlation: Causal learning from time-series graphs with trends. 
+<i>Cognition</i>
+, 195(2), 104079.
+    <a href="https://doi.org/10.1016/j.cognition.2019.104079" target="_blank">doi:10.1016/j.cognition.2019.104079</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2020b" href="#collapse2020b">Abstract</a>
+    <a href="pubs/2020b/2020SooRottmanCognition.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2020b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Time-series graphs are ubiquitous in scientific and popular communications and in mobile health tracking apps. We studied if people can accurately judge whether there is a relation between the two variables in a time-series graph, which is especially challenging if the variables exhibit temporal trends. We found that, for the most part, participants were able to discriminate positive vs. negative relations even when there were strong temporal trends; however, when there is a positive causal relation but opposing temporal trends (one variable increases and the other decreases over time), people have difficulty inferring the positive causal relation. Further, we found that a simple dynamic presentation can ameliorate this challenge. The present finding sheds light on when people can and cannot accurately learn causal relations from time-series data and how to present graphs to aid interpretability.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+        
+<div class="accordion" id="accordion2020a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Wyatt, G., Crane, T. E., & Sikorskii, A. (2020) Expectancy and Utilisation of Reflexology among Women with Advanced Breast Cancer. <i>Applied Psychology: Health and Well-Being.</i>
+    <a href="https://doi.org/10.1111/aphw.12194" target="_blank">doi:10.1111/aphw.12194</a>
+    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2020a" href="#collapse2020a">Abstract</a>
+    <a href="pubs/2020a/2020RottmanWyattCraneSikorskiiAPHW.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2020a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Objective: Little is understood about patient expectations and use of complementary therapies (CT) during cancer treatment. A secondary analysis of an 11-week reflexology trial among women with breast cancer was conducted. We examined factors that predicted women’s expectations about reflexology for symptom relief, factors that predicted utilisation of reflexology, and whether by the end of the trial they believed that reflexology had helped with symptom management. Methods: Women (N = 256) were interviewed at baseline and week 11. Friend or family caregivers in the reflexology group were trained to deliver standardised sessions to patients at least once a week for 4 weeks. Baseline and week-11 reflexology expectations were analysed using general linear models. Reflexology utilisation was analysed with generalised linear mixed effects models. Results: Patients who expected benefits from reflexology (“higher expectancy”) at baseline were younger, had lower anxiety, higher education, higher spirituality, and greater CT use. Worsening symptoms over time were associated with greater utilisation of reflexology, but only when baseline expectancy was low. At week 11, expectancy was higher for those with greater symptom improvement. Conclusions: Assessing patterns of patient factors, expectancy, and change in symptoms can help determine who is likely to use reflexology, and when.
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        
+
+<div class="text-center"><h4>2019</h4></div>
+
+        
+        
+    
+<div class="accordion" id="accordion2019f">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Derringer, C. (2019) Illusory Correlation and Valenced Outcomes. <i>(Doctoral dissertation, University of Pittsburgh)</i>
+      <a href="https://d-scholarship.pitt.edu/37314/" target="_blank">https://d-scholarship.pitt.edu/37314//</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019f" href="#collapse2019f">Abstract</a>
+      <a href="pubs/2019f/2019 Derringer IllusoryCorrelationDissertation.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019f" class="accordion-body collapse">
+      <div class="accordion-inner">
+
+Accurately detecting relationships between variables in the environment is an integral part of our cognition. The tendency for people to infer these relationships where there are none has been documented in several different fields of research, including social psychology, fear learning, and placebo effects. A consistent finding in these areas is that people infer these illusory correlations more readily when they involve negative (aversive) outcomes; however, previous research has not tested this idea directly. Four experiments yielded several empirical findings: Valence effects were reliable and robust in a causal learning task with and without monetary outcomes, they were driven by relative rather than absolute gains and losses, and they were not moderated by the magnitude of monetary gains/losses. Several models of contingency learning are discussed and modified in an attempt to explain the findings, although none of the modifications could reasonably explain valence effects.
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+<div class="accordion" id="accordion2019e">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K. W. X. (2019) The Role of Granularity in Causal Learning. <i>(Doctoral dissertation, University of Pittsburgh)</i>
+      <a href="https://d-scholarship.pitt.edu/36402/" target="_blank">https://d-scholarship.pitt.edu/36402/</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019e" href="#collapse2019e">Abstract</a>
+      <a href="pubs/2019e/2019 Soo GranularityDissertation.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019e" class="accordion-body collapse">
+      <div class="accordion-inner">
+Prior experiments on causal learning have typically investigated how people learn about the relationships between binary variables (e.g., patients either take or do not take a drug, and either exhibit or do not exhibit a particular symptom). Such experiments are often oversimplifications of real-world learning contexts, in which people have to learn about relationships between causes and effects of varying granularities (i.e. how many levels a variable has). In this dissertation, I explored how the granularities of a cause and effect influenced peoples’ estimates of the strength of causal relationships. Four experiments were conducted in which participants learned about a cause-effect relationship by observing a cause and effect over multiple trials and making a judgment about the causal strength. On each trial, participants first viewed the state of the cause and predicted the state of the effect. Participants made stronger causal strength judgments when the effect was more coarse-grained, despite the objective causal strength being fixed (Experiment 1). The influence of the effect’s granularity was due to participants perceiving the prediction task as subjectively easier when it involved a coarse-grained effect, and not due to feedback they received for their predictions (Experiment 2). These findings supported the newly proposed feelings-of-success heuristic; I proposed that participants made judgments of objective causal strength by substituting their subjective feelings of how successfully they made predictions of the effect. In support of this hypothesis, participants’ judgments of how successful they were in the prediction task mediated the relationship between the granularity of the effect and their judgments of objective causal strength (Experiment 3). Finally, the influence of the effect’s granularity was attenuated when participants did not make explicit predictions, suggesting that the effect’s granularity influenced causal strength judgments via the subjective feelings associated with the act of prediction (Experiment 4). Collectively, these studies show that while people are generally accurate when estimating causal strength, real-world factors like the granularity of variables can lead to biases in judgments.
+      </div>
+    </div>
+  </div>
+</div>
+    
+        
+
+<div class="accordion" id="accordion2019d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Weinlader, N. K., Kuo, E, Rottman, B. M., & Nokes-Malach, T. J. (2019) A new approach for uncovering student resources with multiple-choice questions. <i>Physics Education Research Conference 2019.</i>
+      <a href="http://dx.doi.org/10.1119/perc.2019.pr.Weinlader" target="_blank">doi:10.1119/perc.2019.pr.Weinlader</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019d" href="#collapse2019d">Abstract</a>
+      <a href="pubs/2019d/2019WeinladerKuoRottmanNokesMalachPERC.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019d" class="accordion-body collapse">
+      <div class="accordion-inner">
+The traditional approach to studying student understanding presents a question and uses the student’s answer to make inferences about their knowledge. However, this method doesn’t capture the range of possible alternative ideas available to students. We use a new approach, asking students to generate a plausible explanation for every choice of a multiple-choice question, to capture a range of explanations that students can generate in answering physics questions. Asking 16 students to provide explanations in this way revealed alternative possibilities for student thinking that would not have been captured if they only provided one solution. The findings show two ways these alternatives can be productive for learning physics: (i) even students who ultimately chose the wrong answer could often generate the correct explanation and (ii) many incorrect explanations contained elements of correct physical reasoning. We discuss the instructional implications of this multiple-choice questioning approach and of students’ alternative ideas.
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        
+
+
+<div class="accordion" id="accordion2019c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Willett, C. & Rottman, B. M. (2019). The Accuracy of Causal Learning over 24 Days.
+In A. Goel, C. Seifert, & C. Freska (Eds.),
+<i>Proceedings of the 41st Annual Conference of the Cognitive Science Society. </i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019c" href="#collapse2019c">Abstract</a> <a href="pubs/2019c/2019WillettRottmanCogSci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Humans often rely on past experiences stored in long-term memory to predict the outcome of an event. In traditional lab- based experiments (e.g., causal learning, probability learning, etc.), these observations are compressed into a successive series of learning trials. The rapid nature of this paradigm means that completing the task relies on working memory. In contrast, real-world events are typically spread out over longer periods of time, and therefore long-term memory must be used. We conducted a 24 day smartphone study to assess how well people can learn causal relationships in extended timeframes. Surprisingly, we found few differences in causal learning when subjects observed events in a traditional rapid series of 24 trials as opposed to one trial per day for 24 days. Specifically, subjects were able to detect causality for generative and preventive datasets and also exhibited illusory correlations in both the short-term and long-term designs. We discuss theoretical implications of this work.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2019b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Caddick, Z., & Rottman, B. M., (2019). Politically Motivated Causal Evaluations of Economic Performance.
+In A. Goel, C. Seifert, & C. Freska (Eds.)
+<i>Proceedings of the 41st Annual Conference of the Cognitive Science Society. </i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019b" href="#collapse2019b">Abstract</a>
+      <a href="pubs/2019b/2019CaddickRottmanCogSci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019b" class="accordion-body collapse">
+      <div class="accordion-inner">
+The current study seeks to extend research on motivated reasoning by examining how prior beliefs influence the interpretation of objective graphs displaying quantitative information. The day before the 2018 midterm election, conservatives and liberals made judgments about four economic indicators displaying real-world data of the US economy. Half of the participants were placed in an 'alien cover story' condition where prior beliefs were reduced under the guise of evaluating a fictional society. The other half of participants in the 'authentic condition' were aware they were being shown real-world data. Despite being shown identical data, participants in the Authentic condition differed in their judgments of the graphs along party lines. The participants in the Alien condition interpreted the data similarly, regardless of politics. There was no evidence of a „backfire‟ effect, and there was some evidence of belief updating when shown objective data.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2019a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Betancur, L., Rottman, B. M., Votruba-Drzal, E., & Schunn, C. (2019). Analytical Assessment of Course Sequencing: The Case of Methodological Courses in Psychology. <i>Journal of Educational Psychology.</i>
+      <!-- <a href="tbd" target="_blank">doi:tbd</a> -->
+      <a href="https://doi.org/10.1037/edu0000269" target="_blank">doi:10.1037/edu0000269</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2019a" href="#collapse2019a">Abstract</a>
+      <a href="pubs/2019a/2019BetancurEtAlEdPsych.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2019a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Small differences in course sequencing may have broad effects on undergraduate science learning. In the current research, we developed an analytical approach for assessing questions about course sequencing using educational datasets, and we applied it to questions about the Psychology major. This study examined the relationships between student achievement (grades) in Psychology courses taken before and after methodological courses. We use a longitudinal institutional dataset involving thousands of students across seven cohorts, and control for demographics, SAT achievement, and prior psychology GPA. We found that two courses were especially important: achievement in statistics and research methods courses related to grades in subsequent advanced seminars, lab courses, and overall psychology GPA. Additionally, relations between research methods achievement and topical course grades were stronger when those courses were taken after vs. before research methods, further reducing the likelihood of hidden 3rd variable explanations. The same was not true for most other introductory courses, though was found for biopsychology, which may be because biopsychology (which also includes neuroscience) is relevant across many areas of psychology, similar to research methods. These correlational findings suggest that requiring students to take research methods and biopsychology early on in the major, and ensuring success in these courses, may enhance subsequent learning. More broadly, this research provides a template for data-based approaches to course sequencing questions within any undergraduate major.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="text-center"><h4>2018</h4></div>
+
+
+<!-- Pub 35 -->
+<div class="accordion" id="accordion2018e">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K. & Rottman, B. M. (2018).
+Switch rates do not influence weighting of rare events in decisions from experience, but optional stopping does. <i>Journal of Behavioral Decision Making, 31</i>(5), 644-661.
+      <!-- <a href="tbd" target="_blank">doi:tbd</a> -->
+      <a href="https://doi.org/10.1002/bdm.2080" target="_blank">doi:10.1002/bdm.2080</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2018e" href="#collapse2018e">Abstract</a>
+      <a href="pubs/2018e/2018SooRottman_SwitchRatesOptionalStopping.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2018e" class="accordion-body collapse">
+      <div class="accordion-inner">
+The current research investigates how people decide which of two options produces a better reward by repeatedly sampling from the options. In particular, it investigates the roles of two features of search, optional stopping and switch rate, on participants' final judgments of which option is better. First, in two studies, we found evidence for a new optional stopping effect; when participants stopped sampling right after experiencing a rare outcome, they made decisions as if they overweighted the rare outcome. Sec- ond, we investigated an effect proposed by Hills and Hertwig (2010) that people who frequently switch between options when sampling are more likely to make deci- sions consistent with underweighting rare outcomes. We conducted a theoretical analysis examining how switch rate can influence underweighting and how the type of decision problem moderates this effect. Informed by the theoretical analysis, we conducted four studies designed to test this effect with high power. None of the stud- ies produced significant effects of switch rate. Lastly, the studies replicated a prior finding that optional stopping and switch rate are negatively correlated. In sum, this research elaborates a fuller understanding of the relation between search strategies (switch rate and optional stopping) on how people decide which option is better and their tendency to overweight versus underweight rare outcomes.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="accordion" id="accordion2018d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K. & Rottman, B. M. (2018). Causal strength induction from time series data. <i>Journal of Experimental Psychology: General, 147</i>(4) 485-513.
+      <!-- <a href="tbd" target="_blank">doi:tbd</a> -->
+      <a href="https://doi.org/10.1037/xge0000423" target="_blank">doi:10.1037/xge0000423</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2018d" href="#collapse2018d">Abstract</a>
+      <a href="pubs/2018d/2018SooRottmanJEPG.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2018d" class="accordion-body collapse">
+      <div class="accordion-inner">
+One challenge when inferring the strength of cause-effect relations from time series data is that the cause and/or effect can exhibit temporal trends. If temporal trends are not accounted for, a learner could infer that a causal relation exists when it does not, or even infer that there is a positive causal relation when the relation is negative, or vice versa. We propose that learners use a simple heuristic to control for temporal trends – that they focus not on the states of the cause and effect at a given instant, but on how the cause and effect change from one observation to the next, which we call transitions. Six experiments were conducted to understand how people infer causal strength from time series data. We found that participants indeed use transitions in addition to states, which helps them to reach more accurate causal judgments (Experiments 1A and 1B). Participants use transitions more when the stimuli are presented in a naturalistic visual format than a numerical format (Experiment 2), and the effect of transitions is not driven by primacy or recency effects (Experiment 3). Finally, we found that participants primarily use the direction in which variables change rather than the magnitude of the change for estimating causal strength (Experiments 4 and 5). Collectively, these studies provide evidence that people often use a simple yet effective heuristic for inferring causal strength from time series data.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Pub 33 -->
+<div class="accordion" id="accordion2018c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Derringer, C., & Rottman, B. M. (2018). How People Learn about Causal Influence when there are Many Possible Causes: A Model Based on Informative Transitions. <i>Cognitive Psychology, 102</i> 41-71.
+      <!-- <a href="tbd" target="_blank">doi:tbd</a> -->
+      <a href="https://doi.org/10.1016/j.cogpsych.2018.01.002" target="_blank">doi:10.1016/j.cogpsych.2018.01.002</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2018c" href="#collapse2018c">Abstract</a>
+      <a href="pubs/2018c/2018DerringerRottmanCogPsych.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2018c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Four experiments tested how people learn cause-effect relations when there are many possible causes of an effect. When there are many cues, even if all the cues together strongly predict the effect, the bivariate relation between each individual cue and the effect can be weak, which can make it difficult to detect the influence of each cue. We hypothesized that when detecting the influence of a cue, in addition to learning from the states of the cues and effect (e.g., a cue is present and the effect is present), which is hypothesized by multiple existing theories of learning, participants would also learn from transitions – how the cues and effect change over time (e.g., a cue turns on and the effect turns on). We found that participants were better able to identify positive and negative cues in an environment in which only one cue changed from one trial to the next, compared to multiple cues changing (Experiments 1A, 1B). Within a single learning sequence, participants were also more likely to update their beliefs about causal strength when one cue changed at a time (‘one-change transitions’) than when multiple cues changed simultaneously (Experiment 2). Furthermore, learning was impaired when the trials were grouped by the state of the effect (Experiment 3) or when the trials were grouped by the state of a cue (Experiment 4), both of which reduce the number of one-change transitions. We developed a modification of the Rescorla-Wagner algorithm to model this ‘Informative Transitions’ learning processes.
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="accordion" id="accordion2018b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K., & Rottman, B. M. (2018). Causal Learning from Trending Time-Series. In C. Kalish, M. Rau, J. Zhu, and T. T. Rogers (Eds.),
+<i>Proceedings of the 40th Annual Conference of the Cognitive Science Society. </i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2018b" href="#collapse2018b">Abstract</a>
+      <a href="pubs/2018b/2018SooRottmanCogsci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2018b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Two studies investigated how people learn the strength of the relation between a cause and an effect in a time series setting in which both variables exhibit temporal trends. In prior research, we found that people control for temporal trends by focusing on transitions, how variables change from one observation to the next in a trial-by-trial presentation (Soo & Rottman, 2018). In Experiment 1, we replicated this effect, and found further evidence that people rely on transitions when there are extremely strong temporal trends. In Experiment 2, we investigated how people infer causal relations from time series data when presented as time series graphs. Though people were often able to control for the temporal trends, they had difficulty primarily when the cause and effect exhibited trends in opposite directions and there was a positive causal relationship. These findings shed light on when people can and can’t accurately learn causal relations in time-series settings.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="accordion" id="accordion2018a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Derringer, C., & Rottman, B. M. (2018). Comparing Mediation Inferences and Explaining Away Inferences  on Three Variable Causal Structures. In C. Kalish, M. Rau, J. Zhu, and T. T. Rogers (Eds.),
+<i>Proceedings of the 38th Annual Conference of the Cognitive Science Society. </i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2018a" href="#collapse2018a">Abstract</a>
+      <a href="pubs/2018a/2018DerringerRottmanCogsci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2018a" class="accordion-body collapse">
+      <div class="accordion-inner">
+People reliably make two errors when making inferences about three-variable causal structures: they violate what is known as the Markov assumption (mediation) on causal chains and common cause structures, and fail to sufficiently ‘explain away’ on common effect structures. Our goal for the present study was to quantitatively compare these two errors after subjects have learned the statistical relations between three variables using procedures designed to maximize the accuracy of their learning and inferences. Aligning with prior research, we found that subjects violated the Markov assumption, and did not sufficiently explain away. We also found judgments about mediation were worse than judgments about explaining away for one inference, but better for another, suggesting that people are not uniquely worse at reasoning about one structure than another. We discuss the results in terms of a theory of cue consistency.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<div class="text-center"><h4>2017</h4></div>
+
+<!-- Pub 31 -->
+<div class="accordion" id="accordion2017c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. (2017). Physician Bayesian updating from personal beliefs about the base rate and likelihood ratio.
+<i>Memory & Cognition, 45</i>(2), 270-280.
+      <a href="https://doi.org/10.3758/s13421-016-0658-z" target="_blank">doi:10.3758/s13421-016-0658-z</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2017c" href="#collapse2017c">Abstract</a>
+      <a href="pubs/2017c/2017Rottman.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2017c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Whether humans can accurately make decisions in line with Bayes’ rule has been one of the most important yet contentious topics in cognitive psychology. Though a number of paradigms have been used for studying Bayesian updating, rarely have subjects been allowed to use their own pre-existing beliefs about the prior and the likelihood. A study is reported in which physicians judged the posttest probability of a diagnosis for a patient vignette after receiving a test result, and the physicians’ posttest judgments were compared to the normative posttest calculated from their own beliefs in the sensitivity and false positive rate of the test (likelihood ratio) and prior probability of the diagnosis. On the one hand, the posttest judgments were strongly related to the physicians’ beliefs about both the prior probability as well as the likelihood ratio, and the priors were used considerably more strongly than in previous research. On the other hand, both the prior and the likelihoods were still not used quite as much as they should have been, and there was evidence of other non-normative aspects to the updating such as updating independent of the likelihood beliefs. By focusing on how physicians use their own prior beliefs for Bayesian updating, this study provides insight into how well experts perform probabilistic inference in settings in which they rely upon their own prior beliefs rather than experimenter provided cues. It suggests both that there is reason to be optimistic about experts’ abilities, but that there is still considerable need for improvement.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="accordion" id="accordion2017b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Marcum, Z. A., Thorpe, C. T., Gellad, W. F. (2017).
+Medication adherence as a learning process: Insights from cognitive psychology. <i>Health Psychology Review, 11</i> (1), 17-32.
+      <a href="https://doi.org/10.1080/17437199.2016.1240624" target="_blank">doi:10.1080/17437199.2016.1240624</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2017b" href="#collapse2017b">Abstract</a>
+      <a href="pubs/2017b/2017RottmanEtAlHealthPsychReview.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2017b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Non-adherence to medications is one of the largest contributors to sub-optimal health outcomes. Many theories of adherence include a ‘value-expectancy’ component in which a patient decides to take a medication partly based on expectations about whether it is effective, necessary, and tolerable. We propose reconceptualizing this common theme as a kind of ‘causal learning’ – the patient learns whether a medication is effective, necessary, and tolerable, from experience with the medication. We apply cognitive psychology theories of how people learn cause-effect relations to elaborate this causal learning challenge. First, expectations and impressions about a medication and beliefs about how a medication works, such as delay of onset, can shape a patient’s perceived experience with the medication. Second, beliefs about medications propagate both ‘top-down’ and ‘bottom-up,’ from experiences with specific medications to general beliefs about medications and vice versa. Third, non-adherence can interfere with learning about a medication, because beliefs, adherence, and experience with a medication are connected in a cyclic learning problem. We propose that by conceptualizing non-adherence as a causal learning process, clinicians can more effectively address a patient’s misconceptions and biases, helping the patient develop more accurate impressions of the medication.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2017a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. (2017). The Acquisition and Use of Causal Structure Knowledge. In
+M.R. Waldmann (Ed.), <a href="https://global.oup.com/academic/product/the-oxford-handbook-of-causal-reasoning-9780199399550?cc=us&lang=en&" target="_blank"><i>Oxford Handbook of Causal Reasoning</i></a> (85-114). Oxford: Oxford U.P.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2017a" href="#collapse2017a">Abstract</a>
+      <a href="pubs/2017a/2017RottmanOxfordHandbook.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2017a" class="accordion-body collapse">
+      <div class="accordion-inner">
+This chapter provides an introduction to how humans learn and reason about multiple causal relations connected together in a causal structure. The first half of the chapter focuses on how people learn causal structures. The main topics involve learning from observations vs. interventions, learn temporal vs. atemporal causal structures, and learning the parameters of a causal structure including individual cause-effect strengths and how multiple causes combine to produce an effect. The second half of the chapter focuses on how individuals reason about the causal structure, such as making predictions about one variable given knowledge about other variables, once the structure has been learned. Some of the most important topics involve reasoning about observations vs. interventions, how well people reason compared to normative models, and whether causal structure beliefs bias reasoning. In both sections I highlight open empirical and theoretical questions.
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="text-center"><h4>2016</h4></div>
+
+
+<div class="accordion" id="accordion2016e">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Prochaska, M. T., & Deaño, R. C. (2016). Bayesian reasoning in residents' preliminary diagnoses.
+<i>Cognitive Research: Principles and Implications, 1</i>(5), 1-7.
+      <a href="https://doi.org/10.1186/s41235-016-0005-8" target="_blank">doi:10.1186/s41235-016-0005-8</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2016e" href="#collapse2016e">Abstract</a>
+      <a href="pubs/2016e/2016RottmanProchaskaDeano.pdf" target="_blank">PDF</a>
+      <a href="pubs/2016e/2016RottmanProchaskaDeanoSupplement.pdf" target="_blank">Supplement</a>
+	</div>
+    </div>
+    <div id="collapse2016e" class="accordion-body collapse">
+      <div class="accordion-inner">
+Whether and when humans in general, and physicians in particular, use their beliefs about base rates in Bayesian reasoning tasks is a long-standing question. Unfortunately, previous research on whether doctors use their beliefs about the prevalence of diseases in diagnostic judgments has critical limitations. In this study, we assessed whether residents’ beliefs about the prevalence of a disease are associated with their judgments of the likelihood of the disease in diagnosis, and whether residents’ beliefs about the prevalence of diseases change across the 3 years of residency. Residents were presented with five ambiguous vignettes typical of patients presenting on the inpatient general medicine services. For each vignette, the residents judged the likelihood of five or six possible diagnoses. Afterward, they judged the prevalence within the general medicine services of all the diseases in the vignettes. Most importantly, residents who believed a disease to be more prevalent tended to rate the disease as more likely in the vignette cases, suggesting a rational tendency to incorporate their beliefs about disease prevalence into their diagnostic likelihood judgments. In addition, the residents’ prevalence judgments for each disease were assessed over the 3 years of residency. The precision of the prevalence estimates increased across the 3 years of residency, though the accuracy of the prevalence estimates did not. These results imply that residents do have a rational tendency to use prevalence beliefs for diagnosis, and this finding also contributes to a larger question of whether humans intuitively use base rates for making judgments.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2016d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., & Hastie, R. (2016).
+Do people reason rationally about causally related events? Markov violations, weak inferences, and failures of explaining away.
+<i>Cognitive Psychology, 87,</i> 88-134.
+      <a href="https://doi.org/10.1016/j.cogpsych.2016.05.002" target="_blank">doi:10.1016/j.cogpsych.2016.05.002</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2016d" href="#collapse2016d">Abstract</a>
+      <a href="pubs/2016d/2016RottmanHastieCogPsych.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2016d" class="accordion-body collapse">
+      <div class="accordion-inner">
+Making judgments by relying on beliefs about the causal relationships between events is a fundamental capacity of everyday cognition. In the last decade, Causal Bayesian Networks have been proposed as a framework for modeling causal reasoning. Two experiments were conducted to provide comprehensive data sets with which to evaluate a variety of different types of judgments in comparison to the standard Bayesian networks calculations. Participants were introduced to a fictional system of three events and observed a set of learning trials that instantiated the multivariate distribution relating the three variables. We tested inferences on chains X→Y→Z, common cause structures X←Y→Z, and common effect structures X→Y←Z, on binary and numerical variables, and with high and intermediate causal strengths. We tested transitive inferences, inferences when one variable is irrelevant because it is blocked by an intervening variable (Markov Assumption), inferences from two variables to a middle variable, and inferences about the presence of one cause when the alternative cause was known to have occurred (the normative “explaining away” pattern). Compared to the normative account, in general, when the judgments should change, they change on average in the normative direction. However, we also discuss a few persistent violations of the standard normative model. In addition, we evaluate the relative success of 12 theoretical explanations for these deviations.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2016c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. (2016). Searching for the best cause: Roles of mechanism beliefs, autocorrelation, and exploitation.
+<i>Journal of Experimental Psychology: Learning, Memory, & Cognition, 42</i>(8), 1233-1256.
+      <a href="https://doi.org/10.1037/xlm0000244" target="_blank">doi:10.1037/xlm0000244</a>
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2016c" href="#collapse2016c">Abstract</a>
+      <a href="pubs/2016c/2016RottmanJEPLMC.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2016c" class="accordion-body collapse">
+      <div class="accordion-inner">
+When testing which of multiple causes (e.g., medicines) works best, the testing sequence has important implications for the validity of the final judgment. Trying each cause for a period of time before switching to the other is important if the causes have tolerance, sensitization, delay, or carryover (TSDC) effects. In contrast, if the outcome variable is autocorrelated and gradually fluctuates over time rather than being random across time, it can be useful to quickly alternate between the 2 causes, otherwise the causes could be confounded with a secular trend in the outcome. Five experiments tested whether individuals modify their causal testing strategies based on beliefs about TSDC effects and autocorrelation in the outcome. Participants adaptively tested each cause for longer periods of time before switching when testing causal interventions for which TSDC effects were plausible relative to cases when TSDC effects were not plausible. When the autocorrelation in the baseline trend was manipulated, participants exhibited only a small (if any) tendency toward increasing the amount of alternation; however, they adapted to the autocorrelation by focusing on changes in outcomes rather than raw outcome scores, both when making choices about which cause to test as well as when making the final judgment of which cause worked best. Understanding how people test causal relations in diverse environments is an important first step for being able to predict when individuals will successfully choose effective causes in real-world settings.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2016b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K., & Rottman, B. M. (2016). Causal learning with continuous variables over time.
+In A. Papafragou, D. Grodner, D. Mirman, & J. Trueswell (Eds.),
+<i>Proceedings of the 38th Annual Conference of the Cognitive Science Society. </i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2016b" href="#collapse2016b">Abstract</a>
+      <a href="pubs/2016b/2016SooRottmanCogsci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2016b" class="accordion-body collapse">
+      <div class="accordion-inner">
+When estimating the strength of the relation between a cause (X) and effect (Y), there are two main statistical approaches that can be used. The first is using a simple correlation. The second approach, appropriate for situations in which the variables are observed unfolding over time, is to take a correlation of the change scores – whether the variables reliably change in the same or opposite direction. The main question of this manuscript is whether lay people use change scores for assessing causal strength in time series contexts. We found that subjects’ causal strength judgments were better predicted by change scores than the simple correlation, and that use of change scores was facilitated by naturalistic stimuli. Further, people use a heuristic of simplifying the magnitudes of change scores into a binary code (increase vs. decrease). These findings help explain how people uncover true causal relations in complex time series contexts.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2016a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Derringer, C., & Rottman, B. M. (2016).
+Temporal causal strength learning with multiple causes.
+In A. Papafragou, D. Grodner, D. Mirman, & J. Trueswell (Eds.),
+<i>Proceedings of the 38th Annual Conference of the Cognitive Science Society.</i>
+Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2016a" href="#collapse2016a">Abstract</a>
+      <a href="pubs/2016a/2016DerringerRottmanCogsci.pdf" target="_blank">PDF</a>
+
+	</div>
+    </div>
+    <div id="collapse2016a" class="accordion-body collapse">
+      <div class="accordion-inner">
+When learning the relation between a cause and effect, how do people control for all the other factors that influence the same effect? Two experiments tested a hypothesis that people focus on events in which the target cause changes and all other factors remain stable. In both four-cause (Experiment 1) and eight-cause (Experiment 2) scenarios, participants learned causal relations more accurately when they viewed datasets in which only one cause changed at a time. However, participants in the comparison condition, in which multiple causes changed simultaneously, performed fairly well; in addition to focusing on events when a single cause changed, they also used events in which multiple causes changed for updating their beliefs about causal strength. These findings help explain how people are able to learn causal relations in situations when there are many alternative factors.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Pub 24 is out of order - see above -->
+
+
+
+
+
+
+
+
+<div class="text-center"><h4>2015</h4></div>
+
+
+
+<div class="accordion" id="accordion2015c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K., & Rottman, B. M. (2015) Elemental Causal Learning from Transitions. In R. Dale, C. Jennings, P. Maglio, T. Matlock, D. Noelle, A. Warlaumont, & J. Yoshimi
+(Eds.), <i>Proceedings of the 37th Annual Conference of the Cognitive Science Society.</i> Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2015c" href="#collapse2015c">Abstract</a>
+      <a href="pubs/2015c/2015SooRottmanCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2015c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Much research on elemental causal learning has focused on how causal strength is learned from the states of variables. In longitudinal contexts, the way a cause and effect change over time can be informative of the underlying causal relationship. We propose a framework for inferring the causal strength from different observed transitions, and compare the predictions to existing models of causal induction. Subjects observe a cause and effect over time, updating their judgments of causal strength after observing different transitions. The results show that some transitions have an effect on causal strength judgments over and above states.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2015b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. (2015) How Causal Mechanism and Autocorrelation Beliefs Inform Information Search. In R. Dale, C. Jennings, P. Maglio, T. Matlock, D. Noelle, A. Warlaumont, & J. Yoshimi (Eds.), <i>Proceedings of the 37th Annual Conference of the Cognitive Science Society.</i> Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2015b" href="#collapse2015b">Abstract</a>
+      <a href="pubs/2015b/2015RottmanCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2015b" class="accordion-body collapse">
+      <div class="accordion-inner">
+When testing which of multiple causes (e.g., medicines) works the best, the testing sequence has important implications for the validity of the final judgment. Trying one cause for a period of time is important if the cause has tolerance, sensitization, delay, or carryover effects (TSDC). Alternating between the causes is important in autocorrelated environments – when the outcome naturally comes and goes in waves. Across two studies, participants’ beliefs about TSDC influenced the amount of alternating; however, their beliefs about autocorrelation had a very modest effect on the testing strategy. This research helps chart how well people adapt to various environments in order to optimize learning, and it suggests that in situations with no TSDC effects and high autocorrelation, people may not alternate enough.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2015a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., & Hastie, R. (2015) Do Markov Violations and Failures of Explaining Away Persist with Experience? In R. Dale, C. Jennings, P. Maglio, T. Matlock, D. Noelle, A. Warlaumont, & J. Yoshimi (Eds.), <i>Proceedings of the 37th Annual Conference of the Cognitive Science Society.</i> Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2015a" href="#collapse2015a">Abstract</a>
+      <a href="pubs/2015a/2015RottmanHastieCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2015a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Making judgments by relying on beliefs about causal relations is a fundamental aspect of everyday cognition. Recent research has identified two ways that human reasoning seems to diverge from optimal standards; people appear to violate the Markov Assumption, and do not to “explain away” adequately. However, these habits have rarely been tested in the situation that presumably would promote accurate reasoning – after experiencing the multivariate distribution of the variables through trial-by-trial learning, even though this is a standard paradigm. Two studies test whether these habits persist 1) despite adequate learning experience, 2) despite incentives, and 3) whether they also extend to situations with continuous variables.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center"><h4>2014</h4></div>
+
+<!-- Pub 20 -->
+<div class="accordion" id="accordion2014d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M. (2014) Information Search in an Autocorrelated Causal Learning Environment. In P. Bello, M. Guarini, M. McShane, & B. Scassellati
+(Eds.), <i>Proceedings of the 36th Annual Conference of the Cognitive Science Society. </i> Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2014d" href="#collapse2014d">Abstract</a>
+      <a href="pubs/2014d/2014RottmanCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2014d" class="accordion-body collapse">
+      <div class="accordion-inner">
+When trying to determine which of two causes produces a more desirable outcome, if the outcome is autocorrelated (goes through higher and lower periods) it is critical to switch back and forth between the causes. If one first tries Cause 1, and then tries Cause 2, it is likely that an autocorrelated outcome would appear to change with the second cause even though it is merely undergoing normal change over time. Experiment 1 found that people tend to perseverate rather than alternate when testing the effectiveness of causes, and perseveration is associated with substantial errors in judgment. Experiment 2 found that forcing people to alternate improves judgment. This research suggests that a debiasing approach to teach people when to alternate may be warranted to improve causal learning.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2014c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Soo, K. & Rottman, B.M. (2014) Learning Causal Direction from Transitions with Continuous and Noisy Variables. In P. Bello, M. Guarini, M. McShane, & B. Scassellati (Eds.), <i>Proceedings of the 36th Annual Conference of the Cognitive Science Society.</i> Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2014c" href="#collapse2014c">Abstract</a>
+      <a href="pubs/2014c/2014SooRottmanCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2014c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Previous work has found that one way people infer the direction of causal relationships involves identifying an asymmetry in how causes and effects change over time. In the current research we test the generalizability of this reasoning strategy in more complex environments involving ordinal and continuous variables and with noise. Participants were still able to use the strategy with ordinal and continuous variables. However, when noise made it difficult to identify the asymmetry participants were no longer able to infer the causal direction.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2014b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Edwards, B. J., Rottman, B. M., Shankar, M., Betzler, R., Chituc, V., Rodriguez, R., ... Santos, L. R. (2014). Do Capuchin Monkeys (Cebus apella) Diagnose Causal Relations in the Absence of a Direct Reward? (E. Flynn, Ed.) <i>PLoS ONE, 9</i>(2), e88595. doi:10.1371/journal.pone.0088595
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2014b" href="#collapse2014b">Abstract</a>
+      <a href="pubs/2014b/2014EdwardsEtAlPLoSONE.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2014b" class="accordion-body collapse">
+      <div class="accordion-inner">
+We adapted a method from developmental psychology [1] to explore whether capuchin monkeys (Cebus apella) would place objects on a ‘‘blicket detector’’ machine to diagnose causal relations in the absence of a direct reward. Across five experiments, monkeys could place different objects on the machine and obtain evidence about the objects’ causal properties based on whether each object ‘‘activated’’ the machine. In Experiments 1–3, monkeys received both audiovisual cues and a food reward whenever the machine activated. In these experiments, monkeys spontaneously placed objects on the machine and succeeded at discriminating various patterns of statistical evidence. In Experiments 4 and 5, we modified the procedure so that in the learning trials, monkeys received the audiovisual cues when the machine activated, but did not receive a food reward. In these experiments, monkeys failed to test novel objects in the absence of an immediate food reward, even when doing so could provide critical information about how to obtain a reward in future test trials in which the food reward delivery device was reattached. The present studies suggest that the gap between human and animal causal cognition may be in part a gap of motivation. Specifically, we propose that monkey causal learning is motivated by the desire to obtain a direct reward, and that unlike humans, monkeys do not engage in learning for learning’s sake.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="accordion" id="accordion2014a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., Kominsky, J.F., & Keil, F.C. (2014). Children Use Temporal Cues to Learn Causal Directionality. <i>Cognitive Science, 38</i>(3), 489-513.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2014a" href="#collapse2014a">Abstract</a>
+      <a href="pubs/2014a/2014RottmanKominskyKeilCogSci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2014a" class="accordion-body collapse">
+      <div class="accordion-inner">
+The ability to learn the direction of causal relations is critical for understanding and acting in the world. We investigated how children learn causal directionality in situations in which the states of variables are temporally dependent (i.e. autocorrelated). In Experiment 1, children learned about causal direction by comparing the states of one variable before vs. after an intervention on another variable. In Experiment 2, children reliably inferred causal directionality merely from observing how two variables change over time; they interpreted Y changing without a change in X as evidence that Y does not influence X. Both of these strategies make sense if one believes the variables to be temporally dependent. We discuss the implications of these results for interpreting previous findings. More broadly, given that many real-world environments are characterized by temporal dependency, these results suggest strategies that children may use to learn the causal structure of their environments.
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+<div class="text-center"><h4>2013</h4></div>
+        
+<div class="accordion" id="accordion2013a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., & Hastie, R. (2014). Reasoning About Causal Relationships: Inferences on Causal Networks. <i>Psychological Bulletin, 140</i>(1), 109-139. doi:10.1037/a0031903
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2013a" href="#collapse2013a">Abstract</a>
+      <a href="pubs/2013a/2013RottmanHastie.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2013a" class="accordion-body collapse">
+      <div class="accordion-inner">
+	Over the last decade, a normative framework for making causal inferences, Bayesian Probabilistic Causal Networks, has come to dominate psychological studies of inference based on causal relationships. The following causal networks &mdash; [X&rarr;Y&rarr;Z, X&larr;Y&rarr;Z, X&rarr;Y&larr;Z] &mdash; supply answers for questions like, "Suppose both X and Y occur, what is the probability Z occurs?" or "Suppose you intervene and make Y occur, what is the probability Z occurs?" In this review, we provide a tutorial for how normatively to calculate these inferences. Then, we systematically detail the results of behavioral studies comparing human qualitative and quantitative judgments to the normative calculations for many network structures and for several types of inferences on those networks. Overall, when the normative calculations imply that an inference should increase, judgments usually go up; when calculations imply a decrease, judgments usually go down. However, two systematic deviations appear. First, people's inferences violate the Markov assumption. For example, when inferring Z from the structure X&rarr;Y&rarr;Z, people think that X is relevant even when Y completely mediates the relationship between X and Z. Second, even when people's inferences are directionally consistent with the normative calculations, they are often not as sensitive to the parameters and the structure of the network as they should be. We conclude with a discussion of productive directions for future research.
+      </div>
+    </div>
+  </div>
+</div>
+        
+        
+        
+
+<div class="text-center"><h4>2012</h4></div>
+
+<!-- Pub 15 -->
+<div class="accordion" id="accordion2012b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., & Keil, F.C. (2012). Causal Structure Learning over Time: Observations and Interventions. <i>Cognitive Psychology, 64,</i> 93-125. doi:10.1016/j.cogpsych.2011.10.003.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2012b" href="#collapse2012b">Abstract</a>
+      <a href="pubs/2012b/2012RottmanKeilCogPsych.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2012b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Seven studies examined how people learn causal relationships in scenarios when the variables are temporally dependent &mdash; the states of variables are stable over time. When people intervene on X, and Y subsequently changes state compared to before the intervention, people infer that X influences Y. This strategy allows people to learn causal structures quickly and reliably when variables are temporally stable (Experiments 1 and 2). People use this strategy even when the cover story suggests that the trials are independent (Experiment 3). When observing variables over time, people believe that when a cause changes state, its effects likely change state, but an effect may change state due to an exogenous influence in which case its observed cause may not change state at the same time. People used this strategy to learn the direction of causal relations and a wide variety of causal structures (Experiments 4-6). Finally, considering exogenous influences responsible for the observed changes facilitates learning causal directionality (Experiment 7). Temporal reasoning may be the norm rather than the exception for causal learning and may reflect the way most events are experienced naturalistically.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2012a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., Gentner, D., & Goldwater, M. B. (2012). Causal Systems Categories: Differences in Novice and Expert Categorization of Causal Phenomena. <i>Cognitive Science, 36,</i> 919-932. doi: 10.1111/j.1551-6709.2012.01253.x
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2012a" href="#collapse2012a">Abstract</a>
+      <a href="pubs/2012a/2012RottmanGentnerGoldwater.pdf" target="_blank">PDF</a>
+      <a href="pubs/2012a/2012RottmanGentnerGoldwaterOnlineSupplement.pdf" target="_blank">Supplement</a>
+	</div>
+    </div>
+    <div id="collapse2012a" class="accordion-body collapse">
+      <div class="accordion-inner">
+We investigated the understanding of causal systems categories &mdash; categories defined by common causal structure rather than by common domain content &mdash; among college students. We asked students who were either novices or experts in the physical sciences to sort descriptions of real-world phenomena that varied in their causal structure (e.g., negative feedback vs. causal chain) and in their content domain (e.g., economics vs. biology). Our hypothesis was that there would be a shift from domain-based sorting to causal sorting with increasing expertise in the relevant domains. This prediction was borne out: The novice groups sorted primarily by domain and the expert group sorted by causal category. These results suggest that science training facilitates insight about causal structures.
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+        
+<div class="text-center"><h4>2011</h4></div>
+
+        
+<div class="accordion" id="accordion2011h">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Chang, A., Sandhofer, C.M., Adelchanow, L., & Rottman, B. (2010). Parental numeric language input to Mandarin Chinese and English speaking preschool children. <i>Journal of Child Language, 38,</i> 341-355. doi:10.1017/S0305000909990390
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011h" href="#collapse2011h">Abstract</a>
+      <a href="pubs/2011h/2011ChangSandhoferAdelschenkoRottmanJChldLng.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011h" class="accordion-body collapse">
+      <div class="accordion-inner">
+The present study examined the number-specific parental language input to Mandarin- and English-speaking preschool-aged children. Mandarin and English transcripts from the CHILDES database were examined for amount of numeric speech, specific types of numeric speech and syntactic frames in which numeric speech appeared. The results showed that Mandarin-speaking parents talked about number more frequently than English-speaking parents. Further, the ways in which parents talked about number terms in the two languages was more supportive of a cardinal interpretation in Mandarin than in English. We discuss these results in terms of their implications for numerical understanding and later mathematical performance.
+      </div>
+    </div>
+  </div>
+</div>
+        
+
+<div class="accordion" id="accordion2011g">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., & Ahn, W. (2011). Effect of grouping of evidence types on learning about interactions between observed and unobserved causes. <i>Journal of Experimental Psychology: Learning, Memory, & Cognition, 37(6),</i> 1432-1448. doi:10.1037/a0024829
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011g" href="#collapse2011g">Abstract</a>
+      <a href="pubs/2011g/2011RottmanAhnJEPLMC.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011g" class="accordion-body collapse">
+      <div class="accordion-inner">
+When a cause interacts with unobserved factors to produce an effect, the contingency between the observed cause and effect cannot be taken at face value to infer causality. Yet, it would be computationally intractable to consider all possible unobserved, interacting factors. Nonetheless, six experiments found that people can learn about an unobserved cause participating in an interaction with an observed cause when the unobserved cause is stable over time. Participants observed periods in which a cause and effect were associated followed by periods of the opposite association ("grouped condition"). Rather than concluding a complete lack of causality, participants inferred that the observed cause does influence the effect (Experiment 1) and they gave higher causal strength estimates when there were longer periods during which the observed cause appeared to influence the effect (Experiment 2). Consistent with these results, when the trials were grouped, participants inferred that the observed cause interacted with an unobserved cause (Experiments 3 and 4). Indeed, participants could even make precise predictions about the pattern of interaction (Experiments 5 and 6). Implications for theories of causal reasoning are discussed.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2011f">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., & Keil, F.C. (2011). What matters in scientific explanations: Effects of elaboration and content. <i>Cognition, 121,</i> 324-337. doi:10.1016/j.cognition.2011.08.009.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011f" href="#collapse2011f">Abstract</a>
+      <a href="pubs/2011f/2011RottmanKeilCognition.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011f" class="accordion-body collapse">
+      <div class="accordion-inner">
+Given the breadth and depth of available information, determining which components of an explanation are most important is a crucial process for simplifying learning. Three experiments tested whether people believe that components of an explanation with more elaboration are more important. In Experiment 1, participants read separate and unstructured components that comprised explanations of real-world scientific phenomena, rated the components on their importance for understanding the explanations, and drew graphs depicting which components elaborated on which other components. Participants gave higher importance scores for components that they judged to be elaborated upon by other components. Experiment 2 demonstrated that experimentally increasing the amount of elaboration of a component increased the perceived importance of the elaborated component. Furthermore, Experiment 3 demonstrated that elaboration increases the importance of the elaborated information by providing insight into understanding the elaborated information; information that was too technical to provide insight into the elaborated component did not increase the importance of the elaborated component. While learning an explanation, people piece together the structure of elaboration relationships between components and use the insight provided by elaboration to identify important components.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="accordion" id="accordion2011e">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Kim, N. S. Ahn, W., & Sanislow, C. A.  (2011). Can personality disorder experts recognize DSM-IV personality disorders from Five-Factor Model descriptions of patient cases? <i>The Journal of Clinical Psychiatry, 72,</i> 630-635. doi:10.4088/JCP.09m05534gre
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011e" href="#collapse2011e">Abstract</a>
+      <a href="pubs/2011e/2011RottmanKimAhnSanislowJCP.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011e" class="accordion-body collapse">
+      <div class="accordion-inner">
+Background: Dimensional models of personality are under consideration for integration into the next Diagnostic and Statistical Manual of Mental Disorders (DSM-5), but the clinical utility of such models is unclear. Objective: To test the ability of clinical researchers who specialize in personality disorders to diagnose personality disorders using dimensional assessments and to compare those researchers’ ratings of clinical utility for a dimen- sional system versus for the DSM-IV. Method: A sample of 73 researchers who had each published at least 3 (median = 15) articles on personal- ity disorders participated between December 2008 and January 2009. The Five-Factor Model (FFM), one of the most-studied dimensional models to date, was compared to the DSM-IV. Participants provided diagnoses for case profiles in DSM-IV and FFM formats and then rated the DSM-IV and FFM on 6 aspects of clinical utility. Results: Overall, participants had difficulty identifying correct diagnoses from FFM profiles (t72 = 12.36, P &lt; .01), and the same held true for a subset reporting equal familiarity with the DSM-IV and FFM (t23 = 6.96, P &lt; .01). Participants rated the FFM as less clinically useful than the DSM for making prognoses, devising treatment plans, and communicating with professionals (all t69 &gt; 2.19, all P &lt; .05), but more useful for communicating with patients (t69 = 3.03, P &lt; .01). Conclusions: The results suggest that personality disorder expertise and familiarity with the FFM are insufficient to correctly diagnose personality disorders using FFM profiles. Because of ambiguity inherent in FFM profile descriptors, this insufficiency may prove unlikely to be at- tenuated with increased clinical familiarity with the FFM.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="accordion" id="accordion2011d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. B., & Keil, F. C. (2011). Learning causal direction from repeated observations over time. In L. Carlson, C. H&ouml;lscher, & T. Shipley (Eds.), <i>Proceedings of the 33th Annual Conference of the Cognitive Science Society.</i> (pp. 1847-1852). Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011d" href="#collapse2011d">Abstract</a>
+      <a href="pubs/2011d/2011RottmanKeilCogsciA.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011d" class="accordion-body collapse">
+      <div class="accordion-inner">
+Inferring the direction of causal relationships is notoriously difficult. We propose a new strategy for learning causal direction when observing states of variables over time. When a cause changes state, its effects will likely change, but if an effect changes state due to an exogenous factor, its observed cause will likely stay the same. In two experiments, we found that people use this strategy to infer whether X&rarr;Y vs. X&larr;Y, and X&rarr;Y&rarr;Z vs. X&larr;Y&rarr;Z produced a set of data. We explore a rational Bayesian and a heuristic model to explain these results and discuss implications for causal learning.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2011c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. B., & Keil, F. C. (2011). Which parts of scientific explanations are most important? In L. Carlson, C. H&ouml;lscher, & T. Shipley (Eds.), <i>Proceedings of the 33rd Annual Conference of the Cognitive Science Society.</i> (pp. 378-383). Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011c" href="#collapse2011c">Abstract</a>
+      <a href="pubs/2011c/2011RottmanKeilCogsciB.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011c" class="accordion-body collapse">
+      <div class="accordion-inner">
+Given the depth and breadth of available information, determining which components of an explanation are most important is a crucial process for simplifying learning. Two experiments tested whether people believe that components of an explanation with more elaboration are more important. In Experiment 1, participants gave higher importance scores for components that they judged to be elaborated upon by many other components. In Experiment 2, the amount and type of elaboration was experimentally manipulated. Experiment 2 demonstrated that elaboration increases the importance of the elaborated information by providing insight into understanding the elaborated information; information that was too technical to provide insight into the elaborated component did not increase the importance of the elaborated component. While learning an explanation, people piece together the structure of elaboration relationships between components and use the insight provided by elaboration to identify important components.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2011b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B.M., Ahn, W., & Luhmann, C. C. (2011). When and how do people reason about unobserved causes? In P. Illari, F. Russo, & J. Williamson (Eds.), <i>Causality in the Sciences.</i> Oxford U.P. (pp. 150-183).
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2011b" href="#collapse2011b">Abstract</a>
+    <a href="pubs/2011b/2011RottmanAhnLuhmann.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2011b" class="accordion-body collapse">
+      <div class="accordion-inner">
+Assumptions and beliefs about unobserved causes are critical for inferring causal relationships from observed correlations. For example, an unobserved factor can influence two observed variables, creating a spurious relationship. Or an observed cause may interact with unobserved factors to produce an effect, in which case the contingency between the observed cause and effect cannot be taken at face value to infer causality. We review evidence that three types of situations lead people to infer unobserved causes: after observing single events that occur in the absence of any precipitating causal event, after observing a systematic pattern among events that cannot be explained by observed causes, and after observing a previously stable causal relationship change. In all three scenarios people make sophisticated inferences about unobserved causes to explain the observed data. We also discuss working memory as a requirement for reasoning about unobserved causes and briefly discuss implications for models of human causal reasoning.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2011a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Edwards, B.J., Rottman, B. M., Santos, L.R. (2011). Causal reasoning in children and animals. In T. McCormack, C. Hoerl, and S. Butterfill (Eds.) <i>Tool Use and Causal Cognition.</i> Oxford: Oxford U.P.
+
+	</div>
+    </div>
+    <div id="collapse2011a" class="accordion-body collapse">
+      <div class="accordion-inner">
+XXX
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="text-center"><h4>2010</h4></div>
+
+
+<div class="accordion" id="accordion2010a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., & Keil, F. C. (2010). Connecting causal events: Learning causal structures through repeated interventions over time. In S. Ohlsson & R. Catrambone (Eds.), <i>Proceedings of the 32nd Annual Conference of the Cognitive Science Society</i> (pp.907-912). Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2010a" href="#collapse2010a">Abstract</a>
+      <a href="pubs/2010a/2010RottmanKeilCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2010a" class="accordion-body collapse">
+      <div class="accordion-inner">
+How do we learn causal structures? All current approaches use scenarios in which trials are temporally independent; however, people often learn about scenarios unfolding over time. In such cases, people may assume that other variables don't change at the same instant as an intervention. In Experiment 1, participants were much more successful at learning causal structures when this assumption was upheld than violated. In Experiment 2, participants were less influenced by such temporal information when they believed the trials to be temporally independent, but still used the temporal strategy to some extent. People seem to be inclined to learn causal structures by connecting events over time.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="text-center"><h4>2009</h4></div>
+
+
+<div class="accordion" id="accordion2009d">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Ahn, W., Sanislow, C. A., & Kim, N. S. (2009). Can clinicians recognize DSM-IV personality disorders from Five-Factor Model descriptions of patient cases? <i>The American Journal of Psychiatry, 166,</i> 427-433.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2009d" href="#collapse2009d">Abstract</a>
+      <a href="pubs/2009d/2009RottmanAhnSanislowKimAJP.pdf" target="_blank">PDF</a>
+      <a href="pubs/2009d/2009RottmanAhnSanislowKimAJPSupplement.pdf" target="_blank">Supplement</a>
+      <a href="pubs/2009d/2009SkodolBenderAJPDiscussion.pdf" target="_blank">Discussion</a>
+	</div>
+    </div>
+    <div id="collapse2009d" class="accordion-body collapse">
+      <div class="accordion-inner">
+Features are inherently ambiguous in that their meanings depend on the categories they describe (e.g., small for planets vs. molecules; Murphy, 1988). However, a new proposal for the next version of the DSM (DSM-IV-TR, Diagnostic and Statistical Manual of Mental Disorders, 4th Ed., text revision; American Psychiatric Association, 2000) advocates eliminating personality disorder categories, instead describing patients using only dimensions with the well-known Five- Factor Model. We investigated whether experts in personality pathology are able to translate dimensional patient descriptions into their corresponding diagnostic categories in the current version of the DSM. The results showed that even experts had considerable difficulty disambiguating the meaning of the dimensions to determine correct diagnoses and found the utility of the dimensional system to be lacking. Implications for categorization research are discussed.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2009c">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. & Ahn, W. (2009). Causal learning about tolerance and sensitization. <i>Psychonomic Bulletin and Review, 16 (6),</i> 1043-1049. doi:10.3758/PBR.16.6.1043
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2009c" href="#collapse2009c">Abstract</a>
+      <a href="pubs/2009c/2009RottmanAhnPBR.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2009c" class="accordion-body collapse">
+      <div class="accordion-inner">
+We introduce two new, abstract, causal schemata used during causal learning; (i) tolerance, when an effect diminishes over time as an entity is repeatedly exposed to the cause (e.g., a person becoming tolerant to caffeine), and (ii) sensitization, when an effect intensifies over time as an entity is repeatedly exposed to the cause (e.g., an antidepressant becoming more effective through repeated use). In Experiment 1, participants observed either cause/effect data patterns unfolding over time exhibiting the tolerance or sensitization schemata. Compared to a condition with the same data appearing in a random order over time, participants inferred stronger causal efficacy and made more confident and more extreme predictions about novel cases. In Experiment 2, the same tolerance/sensitization scenarios occurred either within one entity or across many entities. In the many-entity conditions, when the schemata were violated, participants made much weaker inferences. Implications for causal learning are discussed.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2009b">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M. & Ahn, W. (2009). Causal inference when observed and unobserved causes interact. In N.A. Taatgen & H. van Rijn (Eds.), <i>Proceedings of the 31st Annual Conference of the Cognitive Science Society</i> (pp.1477-1482). Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2009b" href="#collapse2009b">Abstract</a>
+      <a href="pubs/2009b/2009RottmanAhnCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2009b" class="accordion-body collapse">
+      <div class="accordion-inner">
+When a cause interacts with unobserved factors to produce an effect, the contingency between the observed cause and effect cannot be taken at face value to infer causality. Yet, it would be computationally intractable to consider all possible unobserved, interacting factors. Nonetheless, two experiments found that when an unobserved cause is assumed to be fairly stable over time, people can learn about such interactions and adjust their inferences about the causal efficacy of the observed cause. When they observed a period in which a cause and effect were associated followed by a period of the opposite association, rather than concluding a complete lack  of causality, subjects inferred an unobserved, interacting cause. The interaction explains why the overall contingency between the cause and effect is low and allows people to still conclude that the cause is efficacious.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="accordion" id="accordion2009a">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+	<div class="accordion-ben">
+Rottman, B. M., Kim, N. S., Ahn, W., & Sanislow, C. A. (2009). The cognitive consequences of using categorical versus dimensional classification systems: The case of personality disorder experts.  In N.A. Taatgen & H. van Rijn (Eds.), <i>Proceedings of the 31st Annual Conference of the Cognitive Science Society</i> (pp. 2825-2830). Austin, TX: Cognitive Science Society.
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2009a" href="#collapse2009a">Abstract</a>
+      <a href="pubs/2009a/2009RottmanKimAhnSanislowCogsci.pdf" target="_blank">PDF</a>
+	</div>
+    </div>
+    <div id="collapse2009a" class="accordion-body collapse">
+      <div class="accordion-inner">
+Features are inherently ambiguous in that their meanings depend on the categories they describe (e.g., small for planets vs. molecules; Murphy, 1988). However, a new proposal for the next version of the DSM (DSM-IV-TR, Diagnostic and Statistical Manual of Mental Disorders, 4th Ed., text revision; American Psychiatric Association, 2000) advocates eliminating personality disorder categories, instead describing patients using only dimensions with the well-known Five-Factor Model. We investigated whether experts in personality pathology are able to translate dimensional patient descriptions into their corresponding diagnostic categories in the current version of the DSM. The results showed that even experts had considerable difficulty disambiguating the meaning of the dimensions to determine correct diagnoses and found the utility of the dimensional system to be lacking. Implications for categorization research are discussed.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+
+
+	</div>
+
+
+
+
+
+
+
+</body>
+</html>
